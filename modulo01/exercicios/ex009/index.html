@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Mídias em HTML5</h1>
+    <h2>Imagem dinâmica</h2>
+    <p>
+        Tente abrir esse site em outros dispositivos diferentes, <br>
+        ou aumente e diminua o tamanho do seu navegador.
+    </p>
+    <picture> <!--picture usa-se para definir que será adicionado uma imagem-->
+        <source media="(max-width: 750px)" srcset="img/p.jpg" type="Image/jpg">
+        <source media="(max-width: 1050px)" srcset="img/m.jpg" type="Image/jpg"> 
+        <img src="img/g.png" alt="Imagem flexivel">
+        <!--coloque a img primeiro e depois adicione as sources-->
+    </picture>
+
+    <h2>Reproduzindo Áudio</h2>
+    <p>Vamos tocar uma musica!!</p>
+    <!--Primeira maneira-->
+    <audio src="midia/musica.mp3" controls></audio>
+    <!--MP3 WAV OGG-->
+    <br>
+    <!--Segunda maneira-->
+    <audio preload="metadata" controls>
+        <source src="midia/musica.mp3" type="audio/mpeg">
+        <source src="midia/musica.mp3" type="audio/ogg">
+        <p>Infelizmente seu navegador não pode reproduzir áudios</p>
+    </audio>
+</body>
+</html>
